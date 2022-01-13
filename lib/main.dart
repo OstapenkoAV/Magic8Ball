@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -32,10 +34,24 @@ class MagicBallPage extends StatefulWidget {
 }
 
 class _MagicBallPageState extends State<MagicBallPage> {
+
+  int iAnswerNumber = 1;
+
+  void changeAnswer() {
+    setState(() {
+      iAnswerNumber = Random().nextInt(5) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
-        //todo required code here
-        );
+      child: TextButton(
+        onPressed:(){
+          changeAnswer();
+        } ,
+        child: Image.asset('images/ball$iAnswerNumber.png'),
+      ),    
+    );
   } 
 }
