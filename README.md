@@ -1,6 +1,6 @@
 # magic_8_ball
 
-A new Flutter project.
+Simplest app for decisions
 
 ## Getting Started
 
